@@ -1,0 +1,362 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ /* Toggle Styles */
+ 
+ /* ALEXIS */
+
+ .navbar-default{
+     background-color: #3B3A39;
+     border:0px;
+     border-radius: 0;
+ }
+ 
+.navbar-nav{
+     background-color: #3B3A39;
+     border:0px;
+     border-radius: 0;
+ }
+ 
+#menu-toggle{
+     background-color: #FFFFFF;
+     border:0px;
+ }
+ 
+/* Menu Hamburger Icon */ 
+#menu-toggle-2{
+     background-color: #222222;
+     color: #EDEBE9;
+     border:0px;
+ } 
+ 
+.navbar-default button{
+     background-color: #3B3A39;
+     border:0px;
+     border-radius: 0;
+ }
+  
+.navbar-nav button{
+     background-color: #3B3A39;
+     border:0px;
+     border-radius: 0;
+ }
+ 
+ #menu-toggle-2:hover {
+     color: 48D597;
+     background-color: black;
+     border:0px;
+     border-radius: 5px;
+ }
+ 
+ #menu-toggle:hover {
+     color: #FFFFFF;
+     background-color: black;
+     border:0px;
+     border-radius: 5px;
+ }
+ 
+ #wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+#wrapper.toggled {
+    padding-left: 200px;
+    overflow: hidden;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: absolute;
+    left: 200px;
+    width: 0;
+    height:     auto;       /* These two lines were the key. */
+    min-height: 90%;
+    margin-left: -200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #F3F2F1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper {
+    width: 200px;
+}
+
+#page-content-wrapper {
+    position: absolute;
+    padding: 15px;
+    width: 100%;
+    /* Alexis. */
+    height:     auto;       /* These two lines were the key. */
+    min-height: 90%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.xyz{
+    min-width: 360px;
+}
+#wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0px;
+}
+.fixed-brand{
+    width: auto;
+}
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 2px;
+}
+
+.sidebar-nav li {
+    text-indent: 15px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color:  #565656;
+}
+
+/* This is the hover of the left side */
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #48D597;
+    background:#2F4F4F;
+    border-left: #48D597 2px solid;
+    opacity:.75;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+.no-margin{
+    margin:0;
+}
+
+.navbar-brand{
+    padding: 10px 15px;
+}
+#headerLogo{
+    width:150px;
+    height: auto;
+}
+
+.icon{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 22.5px;
+}
+
+.icon_boton{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.text{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.formulario{
+    height: 40px;
+    margin-left: 10px;
+}
+
+.tarjeta{ 
+    font-size:48px;
+}
+
+.well:hover a{
+    color: #3B3A39;
+}
+
+a:hover{
+    font-weight: 600;
+}
+.center-block {
+  display: inline-block;
+  text-align: justify;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 200px;
+    }
+    .fixed-brand{
+        width: 200px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 200px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 200px;
+    }
+    #wrapper.toggled-2 #sidebar-wrapper {
+        width: 50px;
+         height:     auto;       /* These two lines were the key. */
+         min-height: 90%;
+   
+    }
+    #wrapper.toggled-2 #sidebar-wrapper:hover {
+        width: 200px;
+         height:     auto;       /* These two lines were the key. */
+         min-height: 90%;
+   
+    }
+
+
+    #page-content-wrapper {
+        padding: 20px 20px 20px 50px;
+        position: relative;
+         height:     auto;       /* These two lines were the key. */
+         min-height: 90%;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+        padding-left: 250px;
+    }
+    #wrapper.toggled-2 #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+        margin-left: -200px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        width: auto;
+
+    }
+}
+
+.subIcon{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.subText{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -6px;
+}
+
+.tituloInterno{
+    text-align: left;
+    margin-top: 19.5px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: normal;
+    font-family: 'Segoe UI',wf_segoe-ui_normal,helvetica,arial,sans-serif;
+}
+
+.btn{
+    border: 2px;
+    solid: #48D597;
+}
+
+.btn-go{
+    margin: 10px;
+    width: 140px;
+    height: 30px;
+    background-color:#F3F2F1;
+    display: inline-block;
+    cursor:pointer;
+    color:#000;
+    font-family: 'Segoe UI',wf_segoe-ui_normal,helvetica,arial,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    font-color: #000;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+    float: none;
+}
+
+
+.btn-go:hover {
+	background-color: #EDEBE9;
+        color:#000;
+        font-color: #000;
+        font-family: 'Segoe UI',wf_segoe-ui_normal,helvetica,arial,sans-serif;
+
+}
+.btn-go:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-go-small{
+    margin: 0px;
+    width: auto;
+    height: auto;
+    border: 0px;
+    background-color:transparent;
+    display: inline-block;
+    cursor:pointer;
+    color:#000;
+    font-color: #000;
+    font-size:42px;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-go-small:hover {
+	background-color: transparent;
+        color:#EDEBE9;
+        font-color: #000;
+}
+.btn-go-small:active {
+	position:relative;
+	top:1px;
+        font-color: #000;
+        
+}
+
