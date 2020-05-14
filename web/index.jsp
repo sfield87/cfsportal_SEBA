@@ -1,7 +1,7 @@
 <%-- 
     Document   : Login
     Created on : Nov 20, 2019, 3:02:59 PM
-    Author     : Field, Sebastian Volviendo a la normalidad
+    Author     : Ferrero, Alexis Robo de COpiright
 --%>
 <%@page import="java.sql.*"%>
 <%@page import="java.io.FileReader"%>
