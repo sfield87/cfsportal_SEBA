@@ -44,7 +44,7 @@
           <ul class="nav-pills nav-stacked" style="list-style-type:none;">
             <li><a href="jsp/BCCForm.jsp">
                 <ion-item>
-                  <ion-icon class="subIcon" name="today"></ion-icon><span class="subText">Refacturación</span>
+                  <ion-icon class="subIcon" name="today"></ion-icon><span class="subText">Refacturaciï¿½n</span>
                 </ion-item>
               </a>
             </li>

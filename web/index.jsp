@@ -1,7 +1,7 @@
 <%-- 
     Document   : Login
     Created on : Nov 20, 2019, 3:02:59 PM
-    Author     : Ferrero, Alexis Robo de COpiright
+    Author     : Field, Sebastian
 --%>
 <%@page import="java.sql.*"%>
 <%@page import="java.io.FileReader"%>
@@ -33,13 +33,16 @@
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <title>CFS Applications</title>
 </head>
+
 <body>
-    <%@include file="/assets/NavBarRaiz.jsp" %>
+      <div id="wrapper" class="toggled toggled-2 full-height">
+      <%@include file="/assets/SideBarRaiz.jsp" %>
+
     <!-- Sidebar -->
-    <div id="wrapper" class="toggled toggled-2">
-    <%@include file="/assets/SideBarRaiz.jsp" %>
-    </div>
-<!--<form method="post" action="../LoginCheck">
+        <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
+      <%@include file="/assets/NavBarRaiz.jsp" %>
+
+      <!--<form method="post" action="../LoginCheck">
                     <table>
                         <tr><td>User Name</td><td><input type="text" name="uname"></td></tr>
                         <tr><td>Password</td><td><input type="password" name="upass"></td></tr>
@@ -148,6 +151,7 @@
           
            
       </div>
+    </div>
     </div>
   <!-- /body -->
   <!-- jQuery -->

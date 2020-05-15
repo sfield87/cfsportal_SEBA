@@ -7,9 +7,19 @@ and open the template in the editor.
     Created on : Nov 21, 2019, 9:07:18 AM
     Author     : Field.sebastian
 */
-#scrollme {
+
+html, body {
+    height: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.scrollme {
     overflow-y: auto;
-    max-height: 500px;
+    height: 80%;
+    padding-bottom: 0px;
 }
 
 #BCC {
@@ -41,10 +51,22 @@ table.dataTable thead .sorting_desc_disabled:before {
 bottom: .5em;
 }
 
-
-
 h5{
     font-size:28px;
+}
+
+#mydatatable_wrapper {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.dataTables_scroll {
+    overflow-y: auto;
+    height: 90%;
+}
+.dataTables_scrollBody {
+    overflow-y: auto;
+    height: 90%;
 }
 
 #mydatatable th{

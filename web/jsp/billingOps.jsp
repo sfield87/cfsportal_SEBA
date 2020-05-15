@@ -45,21 +45,24 @@
 </head>
 
 <body>
-    <%@include file="../assets/NavBar.jsp" %>
-    <!-- Sidebar -->
-    <div id="wrapper" class="toggled toggled-2">
+    <div id="wrapper" class="toggled toggled-2 full-height">
     <%@include file="../assets/SideBar.jsp" %>
+
+    <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
+        <%@include file="../assets/NavBar.jsp" %>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
- 
+
     <div id="page-content-wrapper">
       <div class="container-fluid">
-           <div class="btn-group">
-          <form action="" method="post" class="formulario">
+         <div class="btn-group" style="width: 100%">
+          <form action="" method="post" class="formulario"  style="width: 100%">
             Subcaso:
-        <input type="text" name="txtTicket" size="20" autofocus />
-        <input type="submit" name="SearchTkt" value="Search Ticket" class="btn btn-go" onclick="this.form.action='billingOps.jsp?accion=consulta'" style="border: 2px solid #48D597">
-        <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='billingOps.jsp'" style="border: 2px solid #48D597">    
+            <input type="text" name="txtTicket" size="20" autofocus />
+            <input type="submit" name="SearchTkt" value="Search Ticket" class="btn btn-go" onclick="this.form.action='billingOps.jsp?accion=consulta'"/>
+            <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='billingOps.jsp'" />
+              <p id="xportxlsx" class="xport" style="display: inline-block;margin-left:-10px;"><button class="btn btn-go" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
+
         <!-- Single button -->
        <!--
           <button type="button" class="btn btn-go dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 2px solid #48D597">
@@ -72,7 +75,7 @@
             <li role="separator" class="divider"></li>
             <li><a href="#">Update Ticket</a></li>
           </ul>-->
-            </form> 
+            </form>
         </div>
         </div>
         <!---<table id="mytable">-->
@@ -336,9 +339,7 @@ if(accion.equals("consulta")){
           </table>
 
         </div>
-        <div class="row text-right">
-          <p id="xportxlsx" class="xport"><button class="btn btn-go" type="submit" onclick="doit('xlsx');" style="border: 2px solid #48D597">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
-        </div>
+
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -385,7 +386,7 @@ if(accion.equals("consulta")){
         lengthChange: false,
         paging: false,
         info: false,
-        scrollY: 400,
+        scrollY: '65vh',
         scrollX: true
       });
 

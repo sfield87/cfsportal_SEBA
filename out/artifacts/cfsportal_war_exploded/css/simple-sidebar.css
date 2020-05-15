@@ -12,17 +12,21 @@
      background-color: #3B3A39;
      border:0px;
      border-radius: 0;
+     position: relative;
  }
  
 .navbar-nav{
      background-color: #3B3A39;
      border:0px;
      border-radius: 0;
+    horiz-align: left;
  }
  
 #menu-toggle{
      background-color: #FFFFFF;
      border:0px;
+     float:left;
+      horiz-align: left;
  }
  
 /* Menu Hamburger Icon */ 
@@ -36,6 +40,8 @@
      background-color: #3B3A39;
      border:0px;
      border-radius: 0;
+    float:left;
+    horiz-align: left;
  }
   
 .navbar-nav button{
@@ -45,7 +51,7 @@
  }
  
  #menu-toggle-2:hover {
-     color: 48D597;
+     color: #48D597;
      background-color: black;
      border:0px;
      border-radius: 5px;
@@ -65,6 +71,8 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
+     height:     auto;       /* These two lines were the key. */
+     min-height: 100%;
 }
 
 #wrapper.toggled {
@@ -78,7 +86,7 @@
     left: 200px;
     width: 0;
     height:     auto;       /* These two lines were the key. */
-    min-height: 90%;
+    min-height: 100%;
     margin-left: -200px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -93,12 +101,13 @@
 }
 
 #page-content-wrapper {
-    position: absolute;
-    padding: 15px;
+    position: relative;
+    padding-top: 0px;
+    padding-left: 15px;
     width: 100%;
     /* Alexis. */
-    height:     auto;       /* These two lines were the key. */
-    min-height: 90%;
+    height:     100%;       /* These two lines were the key. */
+    min-height: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -107,7 +116,10 @@
 }
 #wrapper.toggled #page-content-wrapper {
     position: relative;
+    padding-top: 12px;
     margin-right: 0px;
+    height:     100%;       /* These two lines were the key. */
+    min-height: 100%;
 }
 .fixed-brand{
     width: auto;
@@ -169,6 +181,8 @@
 
 .navbar-brand{
     padding: 10px 15px;
+    float: left;
+    horiz-align: left;
 }
 #headerLogo{
     width:150px;
@@ -197,7 +211,7 @@
     margin-left: 10px;
 }
 
-.tarjeta{ 
+.tarjeta{
     font-size:48px;
 }
 
@@ -216,6 +230,7 @@ a:hover{
 @media(min-width:768px) {
     #wrapper {
         padding-left: 200px;
+        height: 100%;
     }
     .fixed-brand{
         width: 200px;
@@ -233,38 +248,64 @@ a:hover{
     }
     #wrapper.toggled-2 #sidebar-wrapper {
         width: 50px;
-         height:     auto;       /* These two lines were the key. */
-         min-height: 90%;
-   
+         height:     100%;       /* These two lines were the key. */
+         min-height: 100%;
+
     }
     #wrapper.toggled-2 #sidebar-wrapper:hover {
         width: 200px;
-         height:     auto;       /* These two lines were the key. */
-         min-height: 90%;
-   
+         height:     100%;       /* These two lines were the key. */
+         min-height: 100%;
+
     }
 
 
     #page-content-wrapper {
-        padding: 20px 20px 20px 50px;
+        padding: 0px 20px 0px 50px;
         position: relative;
-         height:     auto;       /* These two lines were the key. */
-         min-height: 90%;
+        display: block;
+         height:     100%;       /* These two lines were the key. */
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    #page-content-wrapper-main {
+        padding-top: 0px;
+        padding-left: 25px;
+        position: relative;
+        display: block;
+        height:     100%;       /* These two lines were the key. */
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
 
-    #wrapper.toggled #page-content-wrapper {
+    #elements-wrapper {
+        padding: 20px 20px 20px 50px;
         position: relative;
-        margin-right: 0;
-        padding-left: 250px;
+        display: block;
+        height:     100%;       /* These two lines were the key. */
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
-    #wrapper.toggled-2 #page-content-wrapper {
+
+    #wrapper.toggled #page-content-wrapper-main {
         position: relative;
+        height: 100%;      /* These two lines were the key. */
+        min-height: 100%;
         margin-right: 0;
-        margin-left: -200px;
+        padding-left: 200px;
+    }
+    #wrapper.toggled-2 #page-content-wrapper-main{
+        position: relative;
+        height: 100%;     /* These two lines were the key. */
+        min-height: 100%;
+        margin-right: 0;
+        margin-left: -150px;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
@@ -273,6 +314,28 @@ a:hover{
 
     }
 }
+
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        height: 100%;      /* These two lines were the key. */
+        min-height: 100%;
+        margin-right: 0;
+        padding-left: 100px;
+    }
+    #wrapper.toggled-2 #page-content-wrapper {
+        position: relative;
+        height: 100%;     /* These two lines were the key. */
+        min-height: 100%;
+        margin-right: 0;
+        margin-left: -75px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        width: auto;
+
+    }
 
 .subIcon{
     display: inline-block;
@@ -295,16 +358,18 @@ a:hover{
     font-family: 'Segoe UI',wf_segoe-ui_normal,helvetica,arial,sans-serif;
 }
 
+
 .btn{
-    border: 2px;
-    solid: #48D597;
+    vertical-align: middle;
+    display: table-cell;
 }
+
 
 .btn-go{
     margin: 10px;
     width: 140px;
-    height: 30px;
-    background-color:#F3F2F1;
+    height: 35px;
+    background-color:#48D597;
     display: inline-block;
     cursor:pointer;
     color:#000;
@@ -321,7 +386,8 @@ a:hover{
 
 
 .btn-go:hover {
-	background-color: #EDEBE9;
+	    background-color: #EDEBE9;
+        border-color: #48D597;
         color:#000;
         font-color: #000;
         font-family: 'Segoe UI',wf_segoe-ui_normal,helvetica,arial,sans-serif;
@@ -357,6 +423,6 @@ a:hover{
 	position:relative;
 	top:1px;
         font-color: #000;
-        
+
 }
 
