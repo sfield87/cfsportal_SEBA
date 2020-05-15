@@ -31,5 +31,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="ojdbc8" level="application" />
+    <orderEntry type="library" exported="" name="src" level="project" />
   </component>
 </module>

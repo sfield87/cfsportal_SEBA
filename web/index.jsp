@@ -35,11 +35,12 @@
 </head>
 
 <body>
-    <div class="full-height">
-    <%@include file="/assets/NavBarRaiz.jsp" %>
+      <div id="wrapper" class="toggled toggled-2 full-height">
+      <%@include file="/assets/SideBarRaiz.jsp" %>
+
     <!-- Sidebar -->
-    <div id="wrapper" class="toggled toggled-2 full-height">
-    <%@include file="/assets/SideBarRaiz.jsp" %>
+        <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
+      <%@include file="/assets/NavBarRaiz.jsp" %>
 
       <!--<form method="post" action="../LoginCheck">
                     <table>

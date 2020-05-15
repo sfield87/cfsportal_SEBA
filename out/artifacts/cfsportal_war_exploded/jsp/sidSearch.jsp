@@ -37,10 +37,12 @@
 </head>
 
 <body>
-    <%@include file="../assets/NavBar.jsp" %>
-    <!-- Sidebar -->
-    <div id="wrapper" class="toggled toggled-2">
+
+    <div id="wrapper" class="toggled toggled-2 full-height">
     <%@include file="../assets/SideBar.jsp" %>
+
+    <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
+        <%@include file="../assets/NavBar.jsp" %>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
     <div id="page-content-wrapper">

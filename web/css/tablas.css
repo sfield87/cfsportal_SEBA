@@ -16,9 +16,10 @@ html, body {
     height: 100%;
 }
 
-#scrollme {
+.scrollme {
     overflow-y: auto;
-    height: 100%;
+    height: 80%;
+    padding-bottom: 0px;
 }
 
 #BCC {
@@ -56,12 +57,16 @@ h5{
 
 #mydatatable_wrapper {
     overflow-y: auto;
-    height: 75%;
+    height: 100%;
 }
 
 .dataTables_scroll {
     overflow-y: auto;
-    height: 75%;
+    height: 90%;
+}
+.dataTables_scrollBody {
+    overflow-y: auto;
+    height: 90%;
 }
 
 #mydatatable th{

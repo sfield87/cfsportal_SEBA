@@ -34,8 +34,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link href="../css/bootstrap-table.min" rel="stylesheet" type="text/css">
+
   <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-table.min" rel="stylesheet" type="text/css">
   <link href="../css/simple-sidebar.css" rel="stylesheet">
   <link href="../css/tablas.css" rel="stylesheet" type="text/css">
   <link href="../css/datatables.min.css" type="text/css">
@@ -48,10 +49,14 @@
 
 
 <body>
+
+    <div id="wrapper" class="toggled toggled-2 full-height">
+    <%@include file="../assets/SideBar.jsp" %>
+
+    <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
     <%@include file="../assets/NavBar.jsp" %>
     <!-- Sidebar -->
-    <div id="wrapper" class="toggled toggled-2">
-    <%@include file="../assets/SideBar.jsp" %>
+
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
  
@@ -61,27 +66,29 @@
           <form action="" method="post" class="formulario">
             Ticket:
             <input type="text" name="NTicket" size="20" autofocus />
-            <input type="submit" name="Consultar" value="Consultar" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?accion=consulta'" style="border: 2px solid #48D597">
-          
-            <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?'" style="border: 2px solid #48D597">
+            <input type="submit" name="Consultar" value="Consultar" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?accion=consulta'">
 
-          <!--<input type="text" name="txtTicket" size="20" autofocus />
-        <input type="submit" name="SearchTkt" value="Search Ticket" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?accion=consulta'" style="border: 2px solid #48D597">
-            <!-- Single button -->
-        <!--
-          <button type="button" class="btn btn-go dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 2px solid #48D597">
-            Bops Action <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" style="left: 389px">
-            <li><a href="#">Close Subcase</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Update Ticket</a></li>
-          </ul>-->
-           </form> 
-        </div>
-        <!---<table id="mytable">-->
+            <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?'" >
+
+              <!---
+               <div class="dropdown" style="display: inline-block">
+                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                       Dropdown
+                       <span class="caret"></span>
+                   </button>
+                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                       <li><a href="#">Action</a></li>
+                       <li><a href="#">Another action</a></li>
+                       <li><a href="#">Something else here</a></li>
+                       <li role="separator" class="divider"></li>
+                       <li><a href="#">Separated link</a></li>
+                   </ul>
+               </div>
+                -->
+
+            </form>
+         </div>
+         <!---<table id="mytable">-->
         <div class="scrollme">
           <table id="mydatatable" data-search="true" class="table table-striped table-hover">
             <thead>
@@ -239,7 +246,7 @@ if(accion.equals("consulta")){
 
         </div>
         <div class="row text-right">
-          <p id="xportxlsx" class="xport"><button class="btn btn-go" type="submit" onclick="doit('xlsx');" style="border: 2px solid #48D597">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
+          <p id="xportxlsx" class="xport"><button class="btn btn-warning" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
         </div>
       </div>
     </div>
@@ -277,6 +284,7 @@ if(accion.equals("consulta")){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.core.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.core.min.js" type="text/javascript"></script>
 
+
   <script type="text/javascript">
       
     $("h4").text("Tickets Automaticos");  
@@ -287,7 +295,6 @@ if(accion.equals("consulta")){
         lengthChange: false,
         paging: false,
         info: false,
-        scrollY: 400,
         scrollX: true
       });
 
