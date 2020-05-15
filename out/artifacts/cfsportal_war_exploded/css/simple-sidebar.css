@@ -65,6 +65,8 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     overflow: hidden;
+     height:     auto;       /* These two lines were the key. */
+     min-height: 100%;
 }
 
 #wrapper.toggled {
@@ -78,7 +80,7 @@
     left: 200px;
     width: 0;
     height:     auto;       /* These two lines were the key. */
-    min-height: 90%;
+    min-height: 100%;
     margin-left: -200px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -97,8 +99,8 @@
     padding: 15px;
     width: 100%;
     /* Alexis. */
-    height:     auto;       /* These two lines were the key. */
-    min-height: 90%;
+    height:     100%;       /* These two lines were the key. */
+    min-height: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -108,6 +110,8 @@
 #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0px;
+    height:     100%;       /* These two lines were the key. */
+    min-height: 100%;
 }
 .fixed-brand{
     width: auto;
@@ -197,7 +201,7 @@
     margin-left: 10px;
 }
 
-.tarjeta{ 
+.tarjeta{
     font-size:48px;
 }
 
@@ -216,6 +220,7 @@ a:hover{
 @media(min-width:768px) {
     #wrapper {
         padding-left: 200px;
+        height: 100%;
     }
     .fixed-brand{
         width: 200px;
@@ -233,23 +238,34 @@ a:hover{
     }
     #wrapper.toggled-2 #sidebar-wrapper {
         width: 50px;
-         height:     auto;       /* These two lines were the key. */
-         min-height: 90%;
-   
+         height:     100%;       /* These two lines were the key. */
+         min-height: 100%;
+
     }
     #wrapper.toggled-2 #sidebar-wrapper:hover {
         width: 200px;
-         height:     auto;       /* These two lines were the key. */
-         min-height: 90%;
-   
+         height:     100%;       /* These two lines were the key. */
+         min-height: 100%;
+
     }
 
 
-    #page-content-wrapper {
+        #page-content-wrapper {
         padding: 20px 20px 20px 50px;
         position: relative;
-         height:     auto;       /* These two lines were the key. */
-         min-height: 90%;
+        display: block;
+         height:     100%;       /* These two lines were the key. */
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    #elements-wrapper {
+        padding: 20px 20px 20px 50px;
+        position: relative;
+        display: block;
+        height:     100%;       /* These two lines were the key. */
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
@@ -258,11 +274,15 @@ a:hover{
 
     #wrapper.toggled #page-content-wrapper {
         position: relative;
+        height: 100%;      /* These two lines were the key. */
+        min-height: 100%;
         margin-right: 0;
         padding-left: 250px;
     }
     #wrapper.toggled-2 #page-content-wrapper {
         position: relative;
+        height: 100%;     /* These two lines were the key. */
+        min-height: 100%;
         margin-right: 0;
         margin-left: -200px;
         -webkit-transition: all 0.5s ease;

@@ -33,13 +33,15 @@
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <title>CFS Applications</title>
 </head>
+
 <body>
+    <div class="full-height">
     <%@include file="/assets/NavBarRaiz.jsp" %>
     <!-- Sidebar -->
-    <div id="wrapper" class="toggled toggled-2">
+    <div id="wrapper" class="toggled toggled-2 full-height">
     <%@include file="/assets/SideBarRaiz.jsp" %>
-    </div>
-<!--<form method="post" action="../LoginCheck">
+
+      <!--<form method="post" action="../LoginCheck">
                     <table>
                         <tr><td>User Name</td><td><input type="text" name="uname"></td></tr>
                         <tr><td>Password</td><td><input type="password" name="upass"></td></tr>
@@ -148,6 +150,7 @@
           
            
       </div>
+    </div>
     </div>
   <!-- /body -->
   <!-- jQuery -->

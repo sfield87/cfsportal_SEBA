@@ -53,8 +53,8 @@
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
  
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
+    <div id="page-content-wrapper" class="toggled toggled-2">
+        <div id="elements-wrapper" class="toggled toggled-2">
          <div class="row">
           <form action="" method="post" class="formulario">
             <input type="text" name="txtTicket" size="20" autofocus />
@@ -76,7 +76,7 @@
         </div>
 
         <!---<table id="mytable">-->
-        <div class="scrollme">
+        <div id="scrollme">
           <table id="mydatatable" data-search="true" class="table table-striped table-hover">
             <thead>
               <tr>

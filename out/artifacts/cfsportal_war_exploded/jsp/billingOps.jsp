@@ -51,15 +51,15 @@
     <%@include file="../assets/SideBar.jsp" %>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
- 
+
     <div id="page-content-wrapper">
       <div class="container-fluid">
-           <div class="btn-group">
+         <div class="btn-group">
           <form action="" method="post" class="formulario">
             Subcaso:
-        <input type="text" name="txtTicket" size="20" autofocus />
-        <input type="submit" name="SearchTkt" value="Search Ticket" class="btn btn-go" onclick="this.form.action='billingOps.jsp?accion=consulta'" style="border: 2px solid #48D597">
-        <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='billingOps.jsp'" style="border: 2px solid #48D597">    
+            <input type="text" name="txtTicket" size="20" autofocus />
+            <input type="submit" name="SearchTkt" value="Search Ticket" class="btn btn-go" onclick="this.form.action='billingOps.jsp?accion=consulta'" style="border: 2px solid #48D597">
+            <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='billingOps.jsp'" style="border: 2px solid #48D597">
         <!-- Single button -->
        <!--
           <button type="button" class="btn btn-go dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 2px solid #48D597">
