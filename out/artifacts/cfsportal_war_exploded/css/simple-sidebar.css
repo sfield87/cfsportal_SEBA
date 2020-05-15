@@ -111,6 +111,19 @@
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
+.container-fluid {
+    position: relative;
+    padding-top: 0px;
+    padding-left: 15px;
+    width: 100%;
+    /* Alexis. */
+    height:     100%;       /* These two lines were the key. */
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .xyz{
     min-width: 360px;
 }

@@ -79,7 +79,7 @@
           </ul>-->
             </form>
         </div>
-        </div>
+
         <!---<table id="mytable">-->
         <div class="scrollme">
           <table id="mydatatable" data-search="true" class="table table-striped table-hover">
@@ -348,7 +348,7 @@ if(accion.equals("consulta")){
 
   </div>
 
-
+    </div>
   <!-- /#wrapper -->
   <!-- jQuery -->
 
