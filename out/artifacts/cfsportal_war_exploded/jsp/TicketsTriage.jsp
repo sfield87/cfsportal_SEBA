@@ -53,10 +53,10 @@
         <%@include file="../assets/NavBar.jsp" %>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
- 
-    <div id="page-content-wrapper" class="toggled toggled-2">
-        <div id="elements-wrapper" class="toggled toggled-2">
-         <div class="row">
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+            <div class="row">
           <form action="" method="post" class="formulario">
             <input type="text" name="txtTicket" size="20" autofocus />
             <input type="submit" name="SearchTkt" value="Search Ticket" class="btn btn-go" onclick="this.form.action='TicketsTriage.jsp?accion=consulta'" style="border: 2px solid #48D597">
@@ -375,7 +375,6 @@ if(accion.equals("SelectQueue")){
         lengthChange: false,
         paging: false,
         info: false,
-        scrollY: 400,
         scrollX: true
       });
 
