@@ -36,7 +36,16 @@
         <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
             <%@include file="../assets/NavBar.jsp" %>
 
-
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="btn-group">
+                            <input type="submit" name="accion" value="Update" class="btn btn-go" onclick="this.form.action='status_bot.jsp?accion=Update'" id="btnupdate">
+                            <input type="submit" name="Refresh" value="Refresh" class="btn btn-go" onclick="location.reload(true)">
+                    </div>
+                       <div class="row">
+                            <div class="col-lg-3"><h4>Auto rebill</h4></div>
+                            <div class="col-lg-2">
+                                <label class="switch">
 <%
         String accion=request.getParameter("accion");   
         //corrijo inicio con valor nulo
