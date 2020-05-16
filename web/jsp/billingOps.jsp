@@ -3,12 +3,12 @@
     Created on : Nov 20, 2019, 3:02:59 PM
     Author     : Field.sebastian
 --%>
-<%@page import="java.sql.*"%>
-<%@page import="java.io.FileReader"%>
 <%@page import="java.io.BufferedReader"%>
-<%@page import="javax.servlet.http.HttpServlet"%>
-<%@page import="javax.servlet.http.HttpServletRequest"%>
-<%@page import="javax.servlet.http.HttpServletResponse"%>
+<%@page import="java.io.FileReader"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
@@ -27,14 +27,14 @@
 <head>
 
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <link href="../css/bootstrap-table.min" rel="stylesheet" type="text/css">
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/simple-sidebar.css" rel="stylesheet">
+    <link href="../css/bootstrap-table.min" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/simple-sidebar.css" rel="stylesheet">
   <link href="../css/tablas.css" rel="stylesheet" type="text/css">
   <link href="../css/datatables.min.css" type="text/css">
   <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">

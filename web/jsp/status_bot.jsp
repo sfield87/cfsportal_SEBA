@@ -3,13 +3,10 @@
     Created on : Apr 29, 2020, 5:18:41 PM
     Author     : AC16546
 --%>
-<%@page import="java.util.*"%>
-<%@page import="java.sql.*"%>
-<%@page import="java.io.FileReader"%>
-<%@page import="java.io.BufferedReader"%>
-<%@page import="javax.servlet.http.HttpServlet"%>
-<%@page import="javax.servlet.http.HttpServletRequest"%>
-<%@page import="javax.servlet.http.HttpServletResponse"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
@@ -42,11 +39,8 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid">
                     <div class="btn-group">
-                        <form>
-                            <input type="submit" name="accion" value="Update" class="btn btn-go" onclick="this.form.action='status_bot.jsp?accion=Update'" id="btnupdate" style="border: 2px solid #48D597">
-                            <input type="submit" name="Refresh" value="Refresh" class="btn btn-go" onclick="location.reload(true)" style="border: 2px solid #48D597">
-                        </form>
-
+                            <input type="submit" name="accion" value="Update" class="btn btn-go" onclick="this.form.action='status_bot.jsp?accion=Update'" id="btnupdate">
+                            <input type="submit" name="Refresh" value="Refresh" class="btn btn-go" onclick="location.reload(true)">
                     </div>
                        <div class="row">
                             <div class="col-lg-3"><h4>Auto rebill</h4></div>
