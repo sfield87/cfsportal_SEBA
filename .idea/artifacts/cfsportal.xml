@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="cfsportal:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/cfsportal_war_exploded</output-path>
+  <artifact type="exploded-war" name="cfsportal">
+    <output-path>$PROJECT_DIR$/out/artifacts/cfsportal</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="cfsportal/web/Web" />
       <element id="directory" name="WEB-INF">

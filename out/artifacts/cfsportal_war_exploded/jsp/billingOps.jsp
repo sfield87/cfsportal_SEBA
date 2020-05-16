@@ -61,7 +61,9 @@
             <input type="text" name="txtTicket" size="20" autofocus />
             <input type="submit" name="SearchTkt" value="Search Ticket" class="btn btn-go" onclick="this.form.action='billingOps.jsp?accion=consulta'"/>
             <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='billingOps.jsp'" />
-              <p id="xportxlsx" class="xport" style="display: inline-block;margin-left:-10px;"><button class="btn btn-go" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
+            <p id="xportxlsx" class="xport" style="display: inline-block;margin-left:-11px;"><button class="btn btn-go" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
+
+
 
         <!-- Single button -->
        <!--
@@ -77,7 +79,7 @@
           </ul>-->
             </form>
         </div>
-        </div>
+
         <!---<table id="mytable">-->
         <div class="scrollme">
           <table id="mydatatable" data-search="true" class="table table-striped table-hover">
@@ -346,7 +348,7 @@ if(accion.equals("consulta")){
 
   </div>
 
-
+    </div>
   <!-- /#wrapper -->
   <!-- jQuery -->
 
