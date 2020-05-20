@@ -1,0 +1,118 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 21, 2019, 9:07:18 AM
+    Author     : Field.sebastian
+*/
+
+html, body {
+    height: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.scrollme {
+    overflow-y: auto;
+    height: 80%;
+    padding-bottom: 0px;
+}
+
+#BCC {
+    overflow-y: auto;
+    max-height: 500px;
+}
+#BCCresult {
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.dtHorizontalVerticalExampleWrapper {
+max-width: auto;
+margin: 0 auto;
+}
+#dtHorizontalVerticalExample th, td {
+white-space: nowrap;
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}
+
+h5{
+    font-size:28px;
+}
+
+#mydatatable_wrapper {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.dataTables_scroll {
+    overflow-y: auto;
+    height: 90%;
+}
+.dataTables_scrollBody {
+    overflow-y: auto;
+    height: 90%;
+}
+
+#mydatatable th{
+    font-size: 12px;
+}
+#mydatatable td{
+    font-size: 11px;
+}
+#mydatatable_filter label{
+    font-size: 14px;
+    
+}
+
+#mydatatable .link{
+    color:#48D597;
+   
+}
+
+#mydatatable .link:hover{
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+#myBtn:hover {
+  color: red; /* Add a dark-grey background on hover */
+  background-color: transparent;
+}
+
+#download{
+  background-color: transparent;
+  border: none; 
+  outline: none;
+  padding-top: 5px;
+}
