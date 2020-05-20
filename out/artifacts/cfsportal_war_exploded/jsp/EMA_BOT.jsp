@@ -69,6 +69,7 @@
             <input type="submit" name="Consultar" value="Consultar" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?accion=consulta'">
 
             <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?'" >
+            <p id="xportxlsx" class="xport" style="display: inline-block;margin-left:-11px;"><button class="btn btn-go" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
 
               <!---
                <div class="dropdown" style="display: inline-block">
@@ -245,10 +246,7 @@ if(accion.equals("consulta")){
           </table>
 
         </div>
-        <div class="row text-right">
-          <p id="xportxlsx" class="xport"><button class="btn btn-warning" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
-        </div>
-      </div>
+       </div>
     </div>
     <!-- /#page-content-wrapper -->
 

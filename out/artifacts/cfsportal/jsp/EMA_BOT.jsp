@@ -12,14 +12,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-
+    /*
     HttpSession objsession = request.getSession(false);
     String usuario = (String)objsession.getAttribute("usuario");
     if(usuario==null){
-        response.sendRedirect("http://localhost:8080/cfsportal/login.jsp?redirect=jsp/EMA_BOT");
+        response.sendRedirect("http://localhost:8080/Latam_CFS_Application/login.jsp");
         
     }
-
+    */
 %>
 
 <!DOCTYPE html>
@@ -69,6 +69,7 @@
             <input type="submit" name="Consultar" value="Consultar" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?accion=consulta'">
 
             <input type="submit" name="Refresh Page" value="Refresh Page" class="btn btn-go" onclick="this.form.action='EMA_BOT.jsp?'" >
+            <p id="xportxlsx" class="xport" style="display: inline-block;margin-left:-11px;"><button class="btn btn-go" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
 
               <!---
                <div class="dropdown" style="display: inline-block">
@@ -245,15 +246,12 @@ if(accion.equals("consulta")){
           </table>
 
         </div>
-        <div class="row text-right">
-          <p id="xportxlsx" class="xport"><button class="btn btn-warning" type="submit" onclick="doit('xlsx');">Download<ion-icon class="icon_boton" name="download"></ion-icon></button></p>
-        </div>
-      </div>
+       </div>
     </div>
     <!-- /#page-content-wrapper -->
 
   </div>
-    </div>
+
 
   <!-- /#wrapper -->
   <!-- jQuery -->

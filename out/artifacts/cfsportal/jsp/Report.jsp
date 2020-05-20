@@ -39,16 +39,16 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
       <div class="container-fluid">
-        <iframe width="1000" height="700"
-          src="https://app.powerbi.com/reportEmbed?reportId=6ba383b0-426a-4a56-a582-94a6499350fe&groupId=a25cfc24-a509-4dbc-8942-db4be65c36ec&autoAuth=true&ctid=72b17115-9915-42c0-9f1b-4f98e5a4bcd2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"
-          frameborder="0" allowFullScreen="true"></iframe>
+          <iframe
+                  width="100%"
+                  height="90%"
+                  src="https://app.powerbi.com/reportEmbed?reportId=5a462e1a-73fd-435b-9f2b-9cc193071e85&autoAuth=true&ctid=72b17115-9915-42c0-9f1b-4f98e5a4bcd2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
   </div>
   <!-- /#wrapper -->
   <!-- jQuery -->
-
 
   <script src="../js/jquery-1.11.2.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>

@@ -37,8 +37,7 @@ public class InicioSesion extends HttpServlet {
         String user = request.getParameter("user");
         String password = request.getParameter("password");
         String url = request.getParameter("redirect");
-        url="http://localhost:8080/cfsportal_war_exploded/jsp/EMA_BOT";
-        
+
         Consultas co = new Consultas();
         if(co.autenticacion(user, password)){
             HttpSession objsession = request.getSession(true);

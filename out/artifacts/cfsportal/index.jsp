@@ -63,57 +63,9 @@
 
           <div class="container">
             <div class="row">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-2">
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="well">
-                      <div class="text-center">
-                        <ion-icon name="cog" class="tarjeta"></ion-icon>
-                        <h3>Billing Operations</h3>
-                      </div>
-                      <p>Herramientas de Billing Operations</p>
-                      <br/>
-                      <div class="text-center">
-                        <a class="link" href="jsp/billingOps.jsp">Open Subcases</a>
-                        <ion-icon name="remove" class="text"></ion-icon>
-                        <a class="link" href="jsp/EMA_BOT.jsp">Tickets Automaticos</a></br>
-
-                        <a class="link" href="jsp/status_bot.jsp">BOT Status</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-4">
-                    <div class="well">
-                      <div class="text-center">
-                        <ion-icon name="contact" class="tarjeta"></ion-icon>
-                        <h3>Billing Customer Care</h3>
-                      </div>
-                      <p>Acceda al formulario de Facturación manual y otras funcionalidades</p>
-                      <div class="text-center">
-                        <a class="link" href="jsp/BCCForm.jsp">Planilla Refacturación</a>
-                        <ion-icon name="remove" class="text"></ion-icon>
-                        <a class="link" href="jsp/TicketsTriage.jsp">Tickets Triage</a></br>
-
-                        <a class="link" href="">Info Clientes</a>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="col-sm-2">
-                  </div>
-
+                <div class="col-sm-2">
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-2">
-              </div>
-
+              
               <div class="col-sm-4">
                 <div class="well">
                   <div class="text-center">
@@ -128,7 +80,37 @@
                   </div>
                 </div>
               </div>
+
+
               <div class="col-sm-4">
+                <div class="well">
+                  <div class="text-center">
+                    <ion-icon name="contact" class="tarjeta"></ion-icon>
+                    <h3>Billing Customer Care</h3>
+                  </div>
+                  <p>Acceda al formulario de Facturación manual y otras funcionalidades</p>
+                  <div class="text-center">
+                    <a class="link" href="jsp/BCCForm.jsp">Planilla Refacturación</a>
+                    <ion-icon name="remove" class="text"></ion-icon>
+                    <a class="link" href="jsp/TicketsTriage.jsp">Tickets Triage</a>
+                  </div>
+                </div>
+              </div>
+
+                <div class="col-sm-2">
+                </div>
+              
+            </div>
+          </div>
+        </div>
+          
+          
+          <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4">
                 <div class="well">
                   <div class="text-center">
                     <ion-icon name="stats" class="tarjeta"></ion-icon>
@@ -137,22 +119,40 @@
                   <p>Acceda a distintos Dashboards del area de CFS LATAM</p>
                   <div class="text-center">
                     <a class="link" href="jsp/Report.jsp">Dashboards</a>
-                    <ion-icon name="remove" class="text"></ion-icon>
-                    <a id="SID" class="link" href="jsp/reportes.jsp">Descarga Reportes</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="well">
+                  <div class="text-center">
+                    <ion-icon name="cog" class="tarjeta"></ion-icon>
+                    <h3>Billing Operations</h3>
+                  </div>
+                  <p>Herramientas de Billing Operations</p>
+                  <br/>
+                  <div class="text-center">
+                    <a class="link" href="jsp/billingOps.jsp">Open Subcases</a>
+                     <ion-icon name="remove" class="text"></ion-icon>
+                     <a class="link" href="jsp/EMA_BOT.jsp">Tickets Automaticos</a>
                   </div>
                 </div>
               </div>
 
 
-
               <div class="col-sm-2">
               </div>
-
             </div>
           </div>
+            
+            
+
+        </div>
+          
+           
+      </div>
     </div>
     </div>
-  </div>
   <!-- /body -->
   <!-- jQuery -->
 
@@ -182,6 +182,81 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.core.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.core.min.js" type="text/javascript"></script>
 
+  <script type="text/javascript">
+      
+     
+         
+    $(document).ready(function() {
+      var table = $('#mydatatable').DataTable({
+        dom: 'Bfrtip',
+        lengthChange: false,
+        paging: false,
+        info: false,
+        scrollY: 400,
+        scrollX: true
+      });
+
+      table.buttons().container()
+        .appendTo('#example_wrapper .col-sm-6:eq(0)');
+
+     
+    });
+  </script>
+
+    <script>
+      function export_table_to_excel(id, type, fn) {
+var wb = XLSX.utils.table_to_book(document.getElementById(id), {sheet:"Tickets_BOPs"});
+var wbout = XLSX.write(wb, {bookType:type, bookSST:true, type: 'binary'});
+var fname = fn || 'Tickets_BOPs.' + type;
+try {
+	saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), fname);
+} catch(e) { if(typeof console != 'undefined') console.log(e, wbout); }
+return wbout;
+}
+
+function s2ab(s) {
+	if(typeof ArrayBuffer !== 'undefined') {
+		var buf = new ArrayBuffer(s.length);
+
+		var view = new Uint8Array(buf);
+		for (var i=0; i!=s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+		
+		return buf;
+	} else {
+		var buf = new Array(s.length);
+		for (var i=0; i!=s.length; ++i) buf[i] = s.charCodeAt(i) & 0xFF;
+		return buf;
+	}
+}
+
+function doit(type, fn) { return export_table_to_excel('mydatatable', type || 'xlsx', fn); }
+
+
+
+ excelCell.s = {
+	    fill: {
+		patternType: "none", // none / solid
+		fgColor: {rgb: "FF000000"},
+		bgColor: {rgb: "FFFFFFFF"}
+	    },
+	    font: {
+		name: 'Times New Roman',
+		sz: 16,
+		color: {rgb: "#FF000000"},
+		bold: false,
+		italic: false,
+		underline: false
+	    },
+	    border: {
+		top: {style: "thin", color: {auto: 1}},
+		right: {style: "thin", color: {auto: 1}},
+		bottom: {style: "thin", color: {auto: 1}},
+		left: {style: "thin", color: {auto: 1}}
+	    }
+	};
+
+
+  </script>
 </body>
 
 </html>

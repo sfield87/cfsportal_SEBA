@@ -54,34 +54,32 @@
 </style>
 </head>
 <body>
-<div id="wrapper" class="toggled toggled-2 full-height">
-    <%@include file="/assets/SideBarRaiz.jsp" %>
-
+    
+<%@include file="assets/NavBarRaiz.jsp" %>
     <!-- Sidebar -->
-    <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
-        <%@include file="/assets/NavBarRaiz.jsp" %>
-        <div class="login-form">
-            <form method="post" action="Iniciar" id="frmIniciar">
-                <h2 class="text-center">Log in</h2>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Username" required="required" name="user" id="txtUser">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="required" name="password" id="txtpass">
-                </div>
-                <div>
-                    <input type="hidden" name="redirect" id="url">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-block" id="btnIniciar" value="Login">Log in</button>
-                </div>
-
-            </form>
-
+    <div id="wrapper" class="toggled toggled-2">
+<%@include file="assets/SideBarRaiz.jsp" %>
+<div class="login-form">
+    <form method="post" action="Iniciar" id="frmIniciar">
+        <h2 class="text-center">Log in</h2>       
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" required="required" name="user" id="txtUser">
         </div>
-    </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" required="required" name="password" id="txtpass">
+        </div>
+        <div>
+            <input type="hidden" name="redirect" id="url"> 
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-block" id="btnIniciar" value="Login">Log in</button>
+        </div>
+               
+    </form>
+    
 </div>
-
+</div>
+</body>
         <!-- /#wrapper -->
         <!-- jQuery -->
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>

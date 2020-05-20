@@ -3,13 +3,10 @@
     Created on : Apr 29, 2020, 5:18:41 PM
     Author     : AC16546
 --%>
-<%@page import="java.util.*"%>
-<%@page import="java.sql.*"%>
-<%@page import="java.io.FileReader"%>
-<%@page import="java.io.BufferedReader"%>
-<%@page import="javax.servlet.http.HttpServlet"%>
-<%@page import="javax.servlet.http.HttpServletRequest"%>
-<%@page import="javax.servlet.http.HttpServletResponse"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
@@ -21,7 +18,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        
+
         <link href="../css/bootstrap-table.min" rel="stylesheet" type="text/css">
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/simple-sidebar.css" rel="stylesheet">
@@ -33,21 +30,22 @@
         <title>CFS Applications</title>
     </head>
     <body>
-        <%@include file="../assets/NavBar.jsp" %>
-        <!-- Sidebar -->
-        <div id="wrapper" class="toggled toggled-2">
+       <div id="wrapper" class="toggled toggled-2 full-height">
         <%@include file="../assets/SideBar.jsp" %>
-        
-        <div id="page-content-wrapper">
-        <form>
-            <input type="submit" name="accion" value="Update" class="btn btn-go" onclick="this.form.action='status_bot.jsp?accion=Update'" id="btnupdate" style="border: 2px solid #48D597">
-            <input type="submit" name="Refresh" value="Refresh" class="btn btn-go" onclick="location.reload(true)" style="border: 2px solid #48D597">
-        </form>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3"><h4>Auto rebill</h4></div>
-                <div class="col-lg-2">
-                    <label class="switch">
+
+        <div id="page-content-wrapper-main" class="toggled toggled-2 full-height">
+            <%@include file="../assets/NavBar.jsp" %>
+
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="btn-group">
+                            <input type="submit" name="accion" value="Update" class="btn btn-go" onclick="this.form.action='status_bot.jsp?accion=Update'" id="btnupdate">
+                            <input type="submit" name="Refresh" value="Refresh" class="btn btn-go" onclick="location.reload(true)">
+                    </div>
+                       <div class="row">
+                            <div class="col-lg-3"><h4>Auto rebill</h4></div>
+                            <div class="col-lg-2">
+                                <label class="switch">
 <%
         String accion=request.getParameter("accion");   
         //corrijo inicio con valor nulo
@@ -341,9 +339,10 @@
       }
       
     %>
+        </div>
     </div>
-</div>
-        
+       </div>
+
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/sidebar_menu.js"></script>
 <script src="../js/bootstrap-table.min.js"></script>
